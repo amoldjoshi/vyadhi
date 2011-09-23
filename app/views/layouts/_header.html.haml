@@ -1,0 +1,20 @@
+#header
+  #nav
+    .span-24
+      .span-3.append-9
+        - logo = image_tag("logo.png", :alt => "health3d.com")
+        = link_to logo, root_path
+      .span-12.last
+        %ul
+          = link_to_unless_current "Home",     root_path
+          |
+          \#{link_to_unless_current "About",	   about_path} 
+          |
+          \#{link_to_unless_current "Contact",  contact_path}
+          %br/
+          - if user_signed_in?
+            Welcome: #{current_user.email}. Not you?
+            \#{link_to "Sign out", destroy_user_session_path}
+          - else
+            = link_to "Sign up", new_user_registration_path
+            or #{link_to "Sign in", new_user_session_path}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--The detailed standard was copied in Desnktop Ruby on Rails Book Listings-->
+	
+  <title>health3D, Your Health!</title>
+  <%= stylesheet_link_tag 'blueprint/screen', :media => 'screen' %>
+    <%= stylesheet_link_tag 'blueprint/print',  :media => 'print' %>
+   	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+    <!--[if lt IE 8]><%= stylesheet_link_tag 'blueprint/ie' %><![endif]-->  
+  
+  
+	  <%= stylesheet_link_tag :all %>
+	  <%= javascript_include_tag :defaults %>
+	  <%= csrf_meta_tag %>
+	  <%= stylesheet_link_tag 'main'%>
+    
+	</head>
+<body>
+	<div class="container">
+ 		<%= render 'layouts/header' %>
+
+		<div class = "span-24">
+        	<%= yield %>
+        </div><!--End span-24 box.-->
+        
+			
+    
+        <div class = "footer">
+            <%= render 'layouts/footer' %>
+		</div><!--End footer.-->
+	</div><!--End container.-->
+</body>
+</html>

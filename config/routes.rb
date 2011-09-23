@@ -1,4 +1,30 @@
 Vyadhi::Application.routes.draw do
+ 
+  root :to => "pages#home"
+	
+  get "pages/home"
+  match '/home',   :to => 'pages#about'
+
+  get "pages/contact"
+  match '/contact',   :to => 'pages#contact'
+  
+  get "pages/about"
+  match '/about',   :to => 'pages#about'
+
+  get "pages/terms"
+  match '/terms',   :to => 'pages#terms'
+
+  get "pages/disclaimer"
+  match '/disclaimer',   :to => 'pages#disclaimer'
+
+  get "pages/privacy_policy"
+  match '/privacy_policy',   :to => 'pages#privacy_policy'
+
+  get "pages/investor_relations"
+  match '/investor_relations',   :to => 'pages#investor_relations'
+
+  devise_for :users
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

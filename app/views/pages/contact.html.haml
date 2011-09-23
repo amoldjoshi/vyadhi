@@ -1,0 +1,70 @@
+.span-24.box
+  .span-6
+    <form id="dummy" action "" method = "get">
+    %fieldset
+      %legend Contact Us
+      %p
+        %label{:for => "input1"} Full Name: (Enter full name.)*
+        %br
+          %input#input1{:name => "input 1", :type => "text", :value => ""}
+      %p
+        %label{:for => "input2"} Email address: (To contact you back.)*
+        %br
+          %input#input2{:name => "input 2", :type => "text"}
+            %br
+      %p
+        %label{:for => "input3"} Verify Email address: (Will match with Email address.)*
+        %br
+          %input#input3{:name => "input 3", :type => "text"}
+            %br
+      %p
+        %label{:for => "input5"} Choose Type
+        %br
+          %Select#reason{:name => "reason"}
+            %option{:value => "1"} Site issues.
+            %option{:value => "2"} Concern about a web page.
+            %option{:value => "3"} Suggestions.
+            %option{:value => "4"} Others.
+      %p
+        %label{:for => "input6"} Your comments:
+        %br
+          %input#input6{:name => "input 6", :type => "text"}
+            %br
+      %p
+        %label{:for => "input 4"} Security Code:
+        %br
+          %input{:id => "input 4", :name => "input4", :type => "password", :value => ""}
+      %p
+        %input{:type => "submit", :value => "Submit."}
+          %input{:type => "reset", :value => "Reset"}
+    
+  .span-10
+    %h3 Daily deals package?
+    %p We have a great deal hunters' community support. Please give us an opportunity to server you.
+    %p Check out today's deal dashboard!
+    %h3 Why should I register on health3D?
+    %p health3D not only is a great place to find deals, keep yourself posted, use our intersting offerings! These things are coming to you as you read.
+    %h3 Having trouble using health3D?
+    %p
+      Email health3D at
+      %a{:href => "mailto:support@health3D.com"} support@health3D.com
+    %h3 We are hiring:
+    %p
+      Check out
+      %a{:href => "http://health3D.com/jobs"} our jobs page
+    %h3 Suggestions
+    %p
+      We are in the development phase. Please send us your suggestion.
+      %a{:href => "mailto:suggestions@health3D.com"} suggestions@health3D.com
+    %h3 Postal Address
+    %p
+      health3D Inc.
+      %br/
+      3000 E Sunrise Ave.
+      %br/
+      Suite 1325
+      %br/
+      Santa Monica, CA.
+  
+  .prepend-2.span-5.last
+  
