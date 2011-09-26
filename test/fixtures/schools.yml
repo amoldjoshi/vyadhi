@@ -1,0 +1,35 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  number: 1
+  street: MyString
+  adresscity: MyString
+  adress2: MyString
+  state: MyString
+  zip: 1
+  phone: MyString
+  fax: MyString
+  url: MyString
+  type: MyString
+  fund: MyString
+  grades: MyString
+  student_count: 1
+  district_id: 1
+
+two:
+  name: MyString
+  number: 1
+  street: MyString
+  adresscity: MyString
+  adress2: MyString
+  state: MyString
+  zip: 1
+  phone: MyString
+  fax: MyString
+  url: MyString
+  type: MyString
+  fund: MyString
+  grades: MyString
+  student_count: 1
+  district_id: 1

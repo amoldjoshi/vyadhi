@@ -1,0 +1,70 @@
+= form_for @district do |f|
+  -if @district.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@district.errors.count, "error")} prohibited this district from being saved:"
+      %ul
+        - @district.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :city
+    = f.text_field :city
+  .field
+    = f.label :county
+    = f.text_field :county
+  .field
+    = f.label :number
+    = f.text_field :number
+  .field
+    = f.label :street
+    = f.text_field :street
+  .field
+    = f.label :addresscity
+    = f.text_field :addresscity
+  .field
+    = f.label :state
+    = f.text_field :state
+  .field
+    = f.label :zip
+    = f.text_field :zip
+  .field
+    = f.label :phone
+    = f.text_field :phone
+  .field
+    = f.label :url
+    = f.text_field :url
+  .field
+    = f.label :rating
+    = f.text_field :rating
+  .field
+    = f.label :student_count
+    = f.text_field :student_count
+  .field
+    = f.label :school_count
+    = f.text_field :school_count
+  .field
+    = f.label :middle_school_count
+    = f.text_field :middle_school_count
+  .field
+    = f.label :high_school_count
+    = f.text_field :high_school_count
+  .field
+    = f.label :other_school_count
+    = f.text_field :other_school_count
+  .field
+    = f.label :budget
+    = f.text_field :budget
+  .field
+    = f.label :budget_per_pupil
+    = f.text_field :budget_per_pupil
+  .field
+    = f.label :budget_per_pupil_state
+    = f.text_field :budget_per_pupil_state
+  .field
+    = f.label :enrollment
+    = f.text_field :enrollment
+  .actions
+    = f.submit 'Save'

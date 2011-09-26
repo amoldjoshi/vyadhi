@@ -1,0 +1,57 @@
+%h1 Listing districts
+
+%table
+  %tr
+    %th Name
+    %th City
+    %th County
+    %th Number
+    %th Street
+    %th Addresscity
+    %th State
+    %th Zip
+    %th Phone
+    %th Url
+    %th Rating
+    %th Student count
+    %th School count
+    %th Middle school count
+    %th High school count
+    %th Other school count
+    %th Budget
+    %th Budget per pupil
+    %th Budget per pupil state
+    %th Enrollment
+    %th
+    %th
+    %th
+
+  - @districts.each do |district|
+    %tr
+      %td= district.name
+      %td= district.city
+      %td= district.county
+      %td= district.number
+      %td= district.street
+      %td= district.addresscity
+      %td= district.state
+      %td= district.zip
+      %td= district.phone
+      %td= district.url
+      %td= district.rating
+      %td= district.student_count
+      %td= district.school_count
+      %td= district.middle_school_count
+      %td= district.high_school_count
+      %td= district.other_school_count
+      %td= district.budget
+      %td= district.budget_per_pupil
+      %td= district.budget_per_pupil_state
+      %td= district.enrollment
+      %td= link_to 'Show', district
+      %td= link_to 'Edit', edit_district_path(district)
+      %td= link_to 'Destroy', district, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New District', new_district_path

@@ -1,5 +1,11 @@
 Vyadhi::Application.routes.draw do
  
+  resources :schools
+
+  resources :districts
+
+  resources :diseases
+
   root :to => "pages#home"
 	
   get "pages/home"

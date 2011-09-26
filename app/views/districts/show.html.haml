@@ -1,0 +1,66 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @district.name
+%p
+  %b City:
+  = @district.city
+%p
+  %b County:
+  = @district.county
+%p
+  %b Number:
+  = @district.number
+%p
+  %b Street:
+  = @district.street
+%p
+  %b Addresscity:
+  = @district.addresscity
+%p
+  %b State:
+  = @district.state
+%p
+  %b Zip:
+  = @district.zip
+%p
+  %b Phone:
+  = @district.phone
+%p
+  %b Url:
+  = @district.url
+%p
+  %b Rating:
+  = @district.rating
+%p
+  %b Student count:
+  = @district.student_count
+%p
+  %b School count:
+  = @district.school_count
+%p
+  %b Middle school count:
+  = @district.middle_school_count
+%p
+  %b High school count:
+  = @district.high_school_count
+%p
+  %b Other school count:
+  = @district.other_school_count
+%p
+  %b Budget:
+  = @district.budget
+%p
+  %b Budget per pupil:
+  = @district.budget_per_pupil
+%p
+  %b Budget per pupil state:
+  = @district.budget_per_pupil_state
+%p
+  %b Enrollment:
+  = @district.enrollment
+
+= link_to 'Edit', edit_district_path(@district)
+\|
+= link_to 'Back', districts_path

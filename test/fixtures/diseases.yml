@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  scientific_name: MyString
+  video: MyString
+  introduction: MyString
+  infection_mechanism: MyString
+  prevention: MyString
+  screening_test: MyString
+  treatment: MyString
+  severity: 1
+
+two:
+  name: MyString
+  scientific_name: MyString
+  video: MyString
+  introduction: MyString
+  infection_mechanism: MyString
+  prevention: MyString
+  screening_test: MyString
+  treatment: MyString
+  severity: 1

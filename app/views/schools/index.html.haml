@@ -1,0 +1,47 @@
+%h1 Listing schools
+
+%table
+  %tr
+    %th Name
+    %th Number
+    %th Street
+    %th Adresscity
+    %th Adress2
+    %th State
+    %th Zip
+    %th Phone
+    %th Fax
+    %th Url
+    %th Type
+    %th Fund
+    %th Grades
+    %th Student count
+    %th District
+    %th
+    %th
+    %th
+
+  - @schools.each do |school|
+    %tr
+      %td= school.name
+      %td= school.number
+      %td= school.street
+      %td= school.adresscity
+      %td= school.adress2
+      %td= school.state
+      %td= school.zip
+      %td= school.phone
+      %td= school.fax
+      %td= school.url
+      %td= school.type
+      %td= school.fund
+      %td= school.grades
+      %td= school.student_count
+      %td= school.district_id
+      %td= link_to 'Show', school
+      %td= link_to 'Edit', edit_school_path(school)
+      %td= link_to 'Destroy', school, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New School', new_school_path

@@ -1,0 +1,45 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  city: MyString
+  county: MyString
+  number: 1
+  street: MyString
+  addresscity: MyString
+  state: MyString
+  zip: 1
+  phone: 
+  url: MyString
+  rating: 1
+  student_count: 1
+  school_count: 
+  middle_school_count: 1
+  high_school_count: 1
+  other_school_count: 1
+  budget: 9.99
+  budget_per_pupil: 9.99
+  budget_per_pupil_state: 9.99
+  enrollment: 1
+
+two:
+  name: MyString
+  city: MyString
+  county: MyString
+  number: 1
+  street: MyString
+  addresscity: MyString
+  state: MyString
+  zip: 1
+  phone: 
+  url: MyString
+  rating: 1
+  student_count: 1
+  school_count: 
+  middle_school_count: 1
+  high_school_count: 1
+  other_school_count: 1
+  budget: 9.99
+  budget_per_pupil: 9.99
+  budget_per_pupil_state: 9.99
+  enrollment: 1

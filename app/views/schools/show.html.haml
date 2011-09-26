@@ -1,0 +1,51 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @school.name
+%p
+  %b Number:
+  = @school.number
+%p
+  %b Street:
+  = @school.street
+%p
+  %b Adresscity:
+  = @school.adresscity
+%p
+  %b Adress2:
+  = @school.adress2
+%p
+  %b State:
+  = @school.state
+%p
+  %b Zip:
+  = @school.zip
+%p
+  %b Phone:
+  = @school.phone
+%p
+  %b Fax:
+  = @school.fax
+%p
+  %b Url:
+  = @school.url
+%p
+  %b Type:
+  = @school.type
+%p
+  %b Fund:
+  = @school.fund
+%p
+  %b Grades:
+  = @school.grades
+%p
+  %b Student count:
+  = @school.student_count
+%p
+  %b District:
+  = @school.district_id
+
+= link_to 'Edit', edit_school_path(@school)
+\|
+= link_to 'Back', schools_path

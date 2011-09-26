@@ -1,0 +1,33 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @disease.name
+%p
+  %b Scientific name:
+  = @disease.scientific_name
+%p
+  %b Video:
+  = @disease.video
+%p
+  %b Introduction:
+  = @disease.introduction
+%p
+  %b Infection mechanism:
+  = @disease.infection_mechanism
+%p
+  %b Prevention:
+  = @disease.prevention
+%p
+  %b Screening test:
+  = @disease.screening_test
+%p
+  %b Treatment:
+  = @disease.treatment
+%p
+  %b Severity_rating:
+  = @disease.severity_rating
+
+= link_to 'Edit', edit_disease_path(@disease)
+\|
+= link_to 'Back', diseases_path

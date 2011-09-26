@@ -1,0 +1,37 @@
+= form_for @disease do |f|
+  -if @disease.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@disease.errors.count, "error")} prohibited this disease from being saved:"
+      %ul
+        - @disease.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :scientific_name
+    = f.text_field :scientific_name
+  .field
+    = f.label :video
+    = f.text_field :video
+  .field
+    = f.label :introduction
+    = f.text_field :introduction
+  .field
+    = f.label :infection_mechanism
+    = f.text_field :infection_mechanism
+  .field
+    = f.label :prevention
+    = f.text_field :prevention
+  .field
+    = f.label :screening_test
+    = f.text_field :screening_test
+  .field
+    = f.label :treatment
+    = f.text_field :treatment
+  .field
+    = f.label :severity_rating
+    = f.text_field :severity_rating
+  .actions
+    = f.submit 'Save'
