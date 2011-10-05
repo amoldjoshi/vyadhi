@@ -11,9 +11,11 @@
     %th Screening test
     %th Treatment
     %th Severity_rating
-    %th
-    %th
-    %th
+    %th Microbes
+    %th Severity
+    %th IsCurable
+    %th IsSymptoms
+    %th IsCondom
 
   - @diseases.each do |disease|
     %tr
@@ -26,6 +28,11 @@
       %td= disease.screening_test
       %td= disease.treatment
       %td= disease.severity_rating
+      %td= disease.microbes
+      %td= disease.severity
+      %td= disease.IsCurable
+      %td= disease.IsSymptoms
+      %td= disease.IsCondom
       %td= link_to 'Show', disease
       %td= link_to 'Edit', edit_disease_path(disease)
       %td= link_to 'Destroy', disease, :confirm => 'Are you sure?', :method => :delete

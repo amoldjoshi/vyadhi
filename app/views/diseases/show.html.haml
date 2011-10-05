@@ -27,7 +27,105 @@
 %p
   %b Severity_rating:
   = @disease.severity_rating
-
+%p
+  %b Microbes:
+  = @disease.microbes
+%p
+  %b Severity:
+  = @disease.severity
+%p
+  %b Curable?:
+  = @disease.IsCurable
+%p
+  %b Symptoms?:
+  = @disease.IsSymptoms
+%p
+  %b Condom?:
+  = @disease.IsCondom
 = link_to 'Edit', edit_disease_path(@disease)
 \|
 = link_to 'Back', diseases_path
+/ Added new code here.
+%h1
+.column.span-24
+  .span-24.last.box
+  
+    %h4 These are our favorite top3 in top4 categories.
+  / End span-24 box. Deleted Menu from here.
+  .column.span-11.append-1.box
+    %table
+      %th
+        %h3 Electronix
+      %col{:style => "width:380px"}/
+      %col{:style => "width:5px"}/
+      %col{:style => "width:5px"}/
+      
+  .column.span-11.last.box
+    %table
+      %th
+        %h3 Cosmetix
+      %col{:style => "width:380px"}/
+      %col{:style => "width:5px"}/
+      %col{:style => "width:5px"}/
+      
+  .column.span-11.append-1.box
+    %table
+      %th
+        %h3 Sportx
+      %col{:style => "width:380px"}/
+      %col{:style => "width:5px"}/
+      %col{:style => "width:5px"}/
+      
+  .column.span-11.last.box
+    %table
+      %th
+        %h3 Axxesories
+      %col{:style => "width:380px"}/
+      %col{:style => "width:5px"}/
+      %col{:style => "width:5px"}/
+           
+  .column.span-11.append-1.box
+    %table
+      %th
+        %h3 Sportx
+      %col{:style => "width:380px"}/
+      %col{:style => "width:5px"}/
+      %col{:style => "width:5px"}/
+      
+  .column.span-11.last.box
+    %table
+      %th
+        %h3 Axxesories
+      %col{:style => "width:380px"}/
+      %col{:style => "width:5px"}/
+      %col{:style => "width:5px"}/
+  .column.span-11.append-1.box
+    %table
+      %th
+        %h3 Sportx
+      %col{:style => "width:380px"}/
+      %col{:style => "width:5px"}/
+      %col{:style => "width:5px"}/
+      
+  .column.span-11.last.box
+    %table
+      %th
+        %h3 Axxesories
+      %col{:style => "width:380px"}/
+      %col{:style => "width:5px"}/
+      %col{:style => "width:5px"}/
+  .column.span-11.append-1.box
+    %table
+      %th
+        %h3 Sportx
+      %col{:style => "width:380px"}/
+      %col{:style => "width:5px"}/
+      %col{:style => "width:5px"}/
+      
+  .column.span-11.last.box
+    %table
+      %th
+        %h3 Axxesories
+      %col{:style => "width:380px"}/
+      %col{:style => "width:5px"}/
+      %col{:style => "width:5px"}/
