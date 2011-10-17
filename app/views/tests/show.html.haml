@@ -1,0 +1,19 @@
+%p#notice= notice
+
+%p
+  %b Disease:
+  = @test.disease_id
+%p
+  %b No of correct:
+  = @test.no_of_correct
+%p
+  %b No of wrong:
+  = @test.no_of_wrong
+%p
+  %b Pass or fail:
+  = @test.pass_or_fail
+
+= link_to 'Edit', edit_test_path(@test)
+\|
+= link_to 'Back', tests_path
+

@@ -1,131 +1,104 @@
 %p#notice= notice
 
-%p
-  %b Name:
-  = @disease.name
-%p
-  %b Scientific name:
-  = @disease.scientific_name
-%p
-  %b Video:
-  = @disease.video
-%p
-  %b Introduction:
-  = @disease.introduction
-%p
-  %b Infection mechanism:
-  = @disease.infection_mechanism
-%p
-  %b Prevention:
-  = @disease.prevention
-%p
-  %b Screening test:
-  = @disease.screening_test
-%p
-  %b Treatment:
-  = @disease.treatment
-%p
-  %b Severity_rating:
-  = @disease.severity_rating
-%p
-  %b Microbes:
-  = @disease.microbes
-%p
-  %b Severity:
-  = @disease.severity
-%p
-  %b Curable?:
-  = @disease.IsCurable
-%p
-  %b Symptoms?:
-  = @disease.IsSymptoms
-%p
-  %b Condom?:
-  = @disease.IsCondom
-= link_to 'Edit', edit_disease_path(@disease)
-\|
-= link_to 'Back', diseases_path
+
 / Added new code here.
 %h1
 .column.span-24
-  .span-24.last.box
+
+  .column.span-11.append-1.box
+    %table
+      %col{:style => "width:380px"}/
+      %col{:style => "width:5px"}/
+      %col{:style => "width:5px"}/
+      %tr
+        %td 
+          %h4 Video Link Coming soon.
+          %td= 
+      %tr
+        %td  
+          %h4 Infection mechanism:
+      %tr
+        %td= @disease.infection_mechanism
+      %tr
+        %td 
+          %h4 Prevention:
+      %tr
+        %td= @disease.prevention
+      %tr
+        %td
+          %iframe{:frameborder => "0", :height => "300", :marginheight => "0", :marginwidth => "0", :scrolling => "no", :src => "http://www.arcgis.com/home/webmap/embedViewer.html?webmap=d81d4b1292524fb8ba096664d842a7df&zoom=true&scale=true", :width => "420"}
+          %br/
+          %small
+            %a{:href => "http://www.arcgis.com/home/webmap/viewer.html?webmap=d81d4b1292524fb8ba096664d842a7df", :style => "color:#0000FF;text-align:left", :target => "_blank"} View Larger Map
+      %tr
+        %td 
+          %h4 Diagnosed
+      %tr
+        %td= @disease.screening_test
+      %tr
+        %h4 Service Provider in your area
+
+            
+  .column.span-11.last.box
+    %table
+      %col{:style => "width:380px"}/
+      %col{:style => "width:5px"}/
+      %col{:style => "width:5px"}/
+      %tr
+        %td
+          %h3= @disease.name
+      %tr    
+        %td 
+          %h4 Scientific name: 
+      %tr    
+        %td= @disease.scientific_name
+      %tr
+        %td 
+          %h4 
+            What is 
+            = @disease.name
+            ?
+      %tr
+        %td= @disease.introduction
+      %tr
+        %td 
+          %h4 
+            Symptoms for 
+            = @disease.name
+      %tr
+        %td= @disease.infection_mechanism
+      %tr
+        %td 
+          %h4 Leaving Space for Charts.
+      %tr
+        %td 
+          %h4 Treamtment Mechanism
+      %tr
+        %td= @disease.treatment
+      %tr
+        %td 
+          %h4 Treatment Options
+        %td Coming Soon.
+
+%p
+  %h4 Severity_rating:
+  = @disease.severity_rating
+%p
+  %h4 Microbes:
+  = @disease.microbes
+%p
+  %h4 Severity:
+  = @disease.severity
+%p
+  %h4 Curable?:
+  = @disease.IsCurable
+%p
+  %h4 Symptoms?:
+  = @disease.IsSymptoms
+%p
+  %h4 Condom?:
+  = @disease.IsCondom
   
-    %h4 These are our favorite top3 in top4 categories.
-  / End span-24 box. Deleted Menu from here.
-  .column.span-11.append-1.box
-    %table
-      %th
-        %h3 Electronix
-      %col{:style => "width:380px"}/
-      %col{:style => "width:5px"}/
-      %col{:style => "width:5px"}/
-      
-  .column.span-11.last.box
-    %table
-      %th
-        %h3 Cosmetix
-      %col{:style => "width:380px"}/
-      %col{:style => "width:5px"}/
-      %col{:style => "width:5px"}/
-      
-  .column.span-11.append-1.box
-    %table
-      %th
-        %h3 Sportx
-      %col{:style => "width:380px"}/
-      %col{:style => "width:5px"}/
-      %col{:style => "width:5px"}/
-      
-  .column.span-11.last.box
-    %table
-      %th
-        %h3 Axxesories
-      %col{:style => "width:380px"}/
-      %col{:style => "width:5px"}/
-      %col{:style => "width:5px"}/
-           
-  .column.span-11.append-1.box
-    %table
-      %th
-        %h3 Sportx
-      %col{:style => "width:380px"}/
-      %col{:style => "width:5px"}/
-      %col{:style => "width:5px"}/
-      
-  .column.span-11.last.box
-    %table
-      %th
-        %h3 Axxesories
-      %col{:style => "width:380px"}/
-      %col{:style => "width:5px"}/
-      %col{:style => "width:5px"}/
-  .column.span-11.append-1.box
-    %table
-      %th
-        %h3 Sportx
-      %col{:style => "width:380px"}/
-      %col{:style => "width:5px"}/
-      %col{:style => "width:5px"}/
-      
-  .column.span-11.last.box
-    %table
-      %th
-        %h3 Axxesories
-      %col{:style => "width:380px"}/
-      %col{:style => "width:5px"}/
-      %col{:style => "width:5px"}/
-  .column.span-11.append-1.box
-    %table
-      %th
-        %h3 Sportx
-      %col{:style => "width:380px"}/
-      %col{:style => "width:5px"}/
-      %col{:style => "width:5px"}/
-      
-  .column.span-11.last.box
-    %table
-      %th
-        %h3 Axxesories
-      %col{:style => "width:380px"}/
-      %col{:style => "width:5px"}/
-      %col{:style => "width:5px"}/
+= link_to 'Edit', edit_disease_path(@disease)
+\|
+= link_to 'Back', diseases_path

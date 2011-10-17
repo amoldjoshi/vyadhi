@@ -21,13 +21,14 @@
 <body>
 	<div class="container">
  		<%= render 'layouts/header' %>
-
-		<div class = "span-24">
+		
+ 		<div class = "menu">
+        	<%= render 'layouts/menu' %>
+        </div><!--End span-24 box.-->
+		
+        <div class = "span-24">
         	<%= yield %>
         </div><!--End span-24 box.-->
-        
-			
-    
         <div class = "footer">
             <%= render 'layouts/footer' %>
 		</div><!--End footer.-->

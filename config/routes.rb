@@ -1,5 +1,11 @@
 Vyadhi::Application.routes.draw do
  
+  resources :providers
+
+  resources :tests
+
+  resources :questions
+
   resources :schools
 
   resources :districts

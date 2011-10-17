@@ -1,0 +1,33 @@
+%p#notice= notice
+
+%p
+  %b Disease:
+  = @question.disease_id
+%p
+  %b Test:
+  = @question.test_id
+%p
+  %b Disease name:
+  = @question.disease_name
+%p
+  %b Main question:
+  = @question.main_question
+%p
+  %b Choice a:
+  = @question.choice_a
+%p
+  %b Choice b:
+  = @question.choice_b
+%p
+  %b Choice c:
+  = @question.choice_c
+%p
+  %b Choice d:
+  = @question.choice_d
+%p
+  %b Correct choice:
+  = @question.correct_choice
+
+= link_to 'Edit', edit_question_path(@question)
+\|
+= link_to 'Back', questions_path

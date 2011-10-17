@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111004114849) do
+ActiveRecord::Schema.define(:version => 20111010070623) do
 
   create_table "diseases", :force => true do |t|
     t.string   "name"
@@ -58,6 +58,35 @@ ActiveRecord::Schema.define(:version => 20111004114849) do
     t.datetime "updated_at"
   end
 
+  create_table "providers", :force => true do |t|
+    t.string   "name"
+    t.integer  "add_number"
+    t.string   "add_street"
+    t.string   "add_2"
+    t.string   "add_city"
+    t.string   "add_state"
+    t.integer  "add_zip"
+    t.string   "phone"
+    t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "disease_id"
+  end
+
+  create_table "questions", :force => true do |t|
+    t.integer  "disease_id"
+    t.string   "disease_name"
+    t.text     "main_question"
+    t.string   "choice_a"
+    t.string   "choice_b"
+    t.string   "choice_c"
+    t.string   "choice_d"
+    t.string   "correct_choice"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "test_id"
+  end
+
   create_table "schools", :force => true do |t|
     t.string   "name"
     t.integer  "number"
@@ -74,6 +103,15 @@ ActiveRecord::Schema.define(:version => 20111004114849) do
     t.string   "grades"
     t.integer  "student_count"
     t.integer  "district_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tests", :force => true do |t|
+    t.integer  "disease_id"
+    t.integer  "no_of_correct"
+    t.integer  "no_of_wrong"
+    t.boolean  "pass_or_fail"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

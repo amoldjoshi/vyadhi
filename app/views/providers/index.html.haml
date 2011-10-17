@@ -1,0 +1,35 @@
+%h1 Listing providers
+
+%table
+  %tr
+    %th Name
+    %th Add number
+    %th Add street
+    %th Add 2
+    %th Add city
+    %th Add state
+    %th Add zip
+    %th Phone
+    %th Url
+    %th Disease_id
+    %th
+
+  - @providers.each do |provider|
+    %tr
+      %td= provider.name
+      %td= provider.add_number
+      %td= provider.add_street
+      %td= provider.add_2
+      %td= provider.add_city
+      %td= provider.add_state
+      %td= provider.add_zip
+      %td= provider.phone
+      %td= provider.url
+      %td= provider.disease_id
+      %td= link_to 'Show', provider
+      %td= link_to 'Edit', edit_provider_path(provider)
+      %td= link_to 'Destroy', provider, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Provider', new_provider_path

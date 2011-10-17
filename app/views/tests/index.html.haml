@@ -1,0 +1,26 @@
+%h1
+.column.span-24
+  .span-24.last.box  
+    %table
+      %th
+        %h3 Good Luck with test.
+      %col{:style => "width:380px"}/
+      %col{:style => "width:5px"}/
+      %col{:style => "width:5px"}/
+      - Test.find(1).questions.each do |question|
+        %tr{:class => cycle("rowA", "rowB")}
+          %td= question.main_question
+          %tr
+            %td
+              %input{:name => "questions", :type => "radio", :value => question.choice_a}
+                = h question.choice_a
+              %br
+              %input{:name => "questions", :type => "radio", :value => question.choice_b}
+                = h question.choice_b
+              %br
+              %input{:name => "questions", :type => "radio", :value => question.choice_c}
+                = h question.choice_c
+              %br
+              %input{:name => "questions", :type => "radio", :value => question.choice_d}
+                = h question.choice_d
+              %br

@@ -1,0 +1,34 @@
+%h1 Listing questions
+
+%table
+  %tr
+    %th Disease
+    %th Test
+    %th Disease name
+    %th Main question
+    %th Choice a
+    %th Choice b
+    %th Choice c
+    %th Choice d
+    %th Correct choice
+    %th
+    %th
+
+  - @questions.each do |question|
+    %tr
+      %td= question.disease_id
+      %td= question.test_id
+      %td= question.disease_name
+      %td= question.main_question
+      %td= question.choice_a
+      %td= question.choice_b
+      %td= question.choice_c
+      %td= question.choice_d
+      %td= question.correct_choice
+      %td= link_to 'Show', question
+      %td= link_to 'Edit', edit_question_path(question)
+      %td= link_to 'Destroy', question, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Question', new_question_path

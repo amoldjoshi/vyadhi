@@ -1,6 +1,13 @@
 #menu
-  %ul
-    = {link_to_unless_current "Daily Adds",   :controller => "planks", :action => :index}
+    .span-22
+    = link_to_unless_current "Home",     root_path 
     |
-    \#{link_to_unless_current "Weekly Adds",  :controller => "trims",  :action => :index} |
-    \#{link_to_unless_current "Deal Finders", :controller => "studs",  :action => :index}
+    \#{link_to_unless_current "Diseases",  :controller => "diseases",  :action => :index} 
+    |
+    \#{link_to_unless_current "About",	   about_path}    
+    |
+    \#{link_to_unless_current "Privacy Policy",  privacy_policy_path} 
+    |
+    \#{link_to_unless_current "Terms and Condition",  terms_path} 
+    |
+    \#{link_to_unless_current "Disclaimer",  disclaimer_path}

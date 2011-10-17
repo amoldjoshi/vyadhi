@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  disease_id: 1
+  no_of_correct: 1
+  no_of_wrong: 1
+  pass_or_fail: false
+
+two:
+  disease_id: 1
+  no_of_correct: 1
+  no_of_wrong: 1
+  pass_or_fail: false

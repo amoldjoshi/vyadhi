@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  disease_id: 1
+  disease_name: MyString
+  main_question: MyText
+  choice_a: MyString
+  choice_b: MyString
+  choice_c: MyString
+  choice_d: MyString
+  correct_choice: MyString
+
+two:
+  disease_id: 1
+  disease_name: MyString
+  main_question: MyText
+  choice_a: MyString
+  choice_b: MyString
+  choice_c: MyString
+  choice_d: MyString
+  correct_choice: MyString

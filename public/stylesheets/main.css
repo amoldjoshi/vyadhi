@@ -92,6 +92,7 @@ h3 {
 	margin: 0px 0px 0px 30px;
 	border-bottom: solid 1px #625d3b;
 	text-align: left;
+	
 }
 h4 {
 	font-family: sans-serif, Arial, Helvetica, Verdana; ;
@@ -99,8 +100,9 @@ h4 {
 	color: #171508;
 	font-size: 12px;/*Changed from 18 to 10*/
 	margin: 0px 0px 0px 30px;
-	border-bottom: solid 1px #625d3b;
+	/*border-bottom: solid 1px #625d3b;*/
 	text-align: left;
+	text-decoration: underline;
 }
 /********************** Main ***************************/
 #main {
@@ -155,6 +157,51 @@ h4 {
 .member span a{}
 .member span a:hover{}
 
+
+/********************** Menu ***************************/
+#menu {
+	/*background-image:url(../images/Footer.png);*/
+	background: green;
+	background-repeat:no-repeat;
+	width:950px;
+	height:20px;
+	text-align:center;
+	float:left;
+	clear:both;
+}
+#menu ul{
+
+}
+#menu li{
+	display:inline;
+	float:none;
+	text-align:left;
+	padding: 0px 10px 0px 10px;
+	border-right: solid 1px #908a68;
+}
+.lastchild{
+	border-right: 0px none !important;
+}
+#menu a{
+	font-family: sans-serif, Arial, Helvetica ;
+	font-size: 12px;
+	font-weight: bold;
+	text-transform:uppercase;
+	color: #908a68;
+	text-decoration: none;
+}
+#menu a:hover{
+	text-decoration: underline;
+	
+}
+#menu span{
+	font-size: 9px;
+	font-weight: bold;
+	color: #18160e;
+	margin:10px;
+	display:block;
+}
+/*********************Error Messages***********************/
 /********************** Footer ***************************/
 #footer {
 	/*background-image:url(../images/Footer.png);*/
