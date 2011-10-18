@@ -16,6 +16,7 @@ Vyadhi::Application.routes.draw do
 	
   get "pages/home"
   match '/home',   :to => 'pages#about'
+  root :to => 'pages#home'
 
   get "pages/contact"
   match '/contact',   :to => 'pages#contact'
