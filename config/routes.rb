@@ -36,7 +36,7 @@ Vyadhi::Application.routes.draw do
   get "pages/investor_relations"
   match '/investor_relations',   :to => 'pages#investor_relations'
 
-  devise_for :users
+  devise_for :users,  :controllers => { :registrations => "users/registrations" }
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
