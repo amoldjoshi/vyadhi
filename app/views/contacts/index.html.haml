@@ -1,0 +1,25 @@
+.span-24.last.box
+  %h1 Contact Us
+
+.span-24.box
+  .column.span-5.append-1.box
+  - @contacts.each do |contact|
+    %tr
+      %td= contact.id
+   
+  .column.span-18.last.box
+  - @contacts.each do |contact|
+    %tr
+      %td= contact.heading
+      %td= contact.content
+      %td= contact.email
+      %td= contact.url
+      %td= contact.type
+      %td= contact.typeid
+      %td= link_to 'Show', contact
+      %td= link_to 'Edit', edit_contact_path(contact)
+      %td= link_to 'Destroy', contact, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Contact', new_contact_path

@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Heading:
+  = @contact.heading
+%p
+  %b Content:
+  = @contact.content
+%p
+  %b Email:
+  = @contact.email
+%p
+  %b Url:
+  = @contact.url
+%p
+  %b Type:
+  = @contact.type
+%p
+  %b Typeid:
+  = @contact.typeid
+
+= link_to 'Edit', edit_contact_path(@contact)
+\|
+= link_to 'Back', contacts_path

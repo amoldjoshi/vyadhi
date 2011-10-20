@@ -1,0 +1,25 @@
+= form_for @policy do |f|
+  -if @policy.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@policy.errors.count, "error")} prohibited this policy from being saved:"
+      %ul
+        - @policy.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :heading
+    = f.text_field :heading
+  .field
+    = f.label :content
+    = f.text_area :content
+  .field
+    = f.label :priority
+    = f.text_field :priority
+  .field
+    = f.label :type
+    = f.text_field :type
+  .field
+    = f.label :typeid
+    = f.text_field :typeid
+  .actions
+    = f.submit 'Save'

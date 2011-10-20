@@ -10,7 +10,38 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111017163905) do
+ActiveRecord::Schema.define(:version => 20111019220753) do
+
+  create_table "abouts", :force => true do |t|
+    t.string   "heading"
+    t.text     "content"
+    t.integer  "priority"
+    t.string   "type"
+    t.integer  "typeid"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "contacts", :force => true do |t|
+    t.string   "heading"
+    t.text     "content"
+    t.string   "email"
+    t.string   "url"
+    t.string   "type"
+    t.integer  "typeid"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "disclaimers", :force => true do |t|
+    t.string   "heading"
+    t.text     "content"
+    t.integer  "priority"
+    t.string   "type"
+    t.integer  "typeid"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "diseases", :force => true do |t|
     t.string   "name"
@@ -54,6 +85,37 @@ ActiveRecord::Schema.define(:version => 20111017163905) do
     t.decimal  "budget_per_pupil"
     t.decimal  "budget_per_pupil_state"
     t.integer  "enrollment"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "faqs", :force => true do |t|
+    t.string   "heading"
+    t.text     "question"
+    t.text     "answer"
+    t.integer  "priority"
+    t.string   "type"
+    t.integer  "typeid"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "investors", :force => true do |t|
+    t.string   "heading"
+    t.text     "content"
+    t.integer  "priority"
+    t.string   "type"
+    t.integer  "typeid"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "policies", :force => true do |t|
+    t.string   "heading"
+    t.text     "content"
+    t.integer  "priority"
+    t.string   "type"
+    t.integer  "typeid"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -103,6 +165,16 @@ ActiveRecord::Schema.define(:version => 20111017163905) do
     t.string   "grades"
     t.integer  "student_count"
     t.integer  "district_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "terms", :force => true do |t|
+    t.string   "heading"
+    t.text     "content"
+    t.integer  "priority"
+    t.string   "type"
+    t.integer  "typeid"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

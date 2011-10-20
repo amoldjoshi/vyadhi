@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  heading: MyString
+  question: MyText
+  answer: MyText
+  priority: 1
+  type: MyString
+  typeid: 1
+
+two:
+  heading: MyString
+  question: MyText
+  answer: MyText
+  priority: 1
+  type: MyString
+  typeid: 1

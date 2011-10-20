@@ -1,0 +1,24 @@
+.span-24.last.box
+  %h1 Privacy Policy
+
+.span-24.box
+  .column.span-5.append-1.box
+  - @policies.each do |policy|
+    %tr
+      %td= policy.id
+   
+  .column.span-18.last.box
+  - @policies.each do |policy|
+    %tr
+      %td= policy.heading
+      %td= policy.content
+      %td= policy.priority
+      %td= policy.type
+      %td= policy.typeid
+      %td= link_to 'Show', policy
+      %td= link_to 'Edit', edit_term_path(policy)
+      %td= link_to 'Destroy', term, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Policy', new_policy_path

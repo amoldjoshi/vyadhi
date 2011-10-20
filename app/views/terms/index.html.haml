@@ -1,0 +1,24 @@
+.span-24.last.box
+  %h1 Terms and Conditions
+
+.span-24.box
+  .column.span-5.append-1.box
+  - @terms.each do |term|
+    %tr
+      %td= term.id
+   
+  .column.span-18.last.box
+  - @terms.each do |term|
+    %tr
+      %td= term.heading
+      %td= term.content
+      %td= term.priority
+      %td= term.type
+      %td= term.typeid
+      %td= link_to 'Show', term
+      %td= link_to 'Edit', edit_term_path(term)
+      %td= link_to 'Destroy', term, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Term', new_term_path

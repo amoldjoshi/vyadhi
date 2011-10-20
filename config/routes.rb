@@ -1,5 +1,19 @@
 Vyadhi::Application.routes.draw do
  
+  resources :contacts
+
+  resources :faqs
+
+  resources :investors
+
+  resources :policies
+
+  resources :abouts
+
+  resources :disclaimers
+
+  resources :terms
+
   resources :providers
 
   resources :tests
@@ -15,26 +29,26 @@ Vyadhi::Application.routes.draw do
   root :to => "pages#home"
 	
   get "pages/home"
-  match '/home',   :to => 'pages#about'
-  root :to => 'pages#home'
+  match '/home',   :to => 'pages#home'
+  #root :to => 'pages#home'
 
-  get "pages/contact"
-  match '/contact',   :to => 'pages#contact'
+  #get "pages/contact"
+  #match '/contact',   :to => 'pages#contact'
   
-  get "pages/about"
-  match '/about',   :to => 'pages#about'
+  #get "pages/about"
+  #match '/about',   :to => 'pages#about'
 
-  get "pages/terms"
-  match '/terms',   :to => 'pages#terms'
+  #get "pages/terms"
+  #match '/terms',   :to => 'pages#terms'
 
-  get "pages/disclaimer"
-  match '/disclaimer',   :to => 'pages#disclaimer'
+  #get "pages/disclaimer"
+  #match '/disclaimer',   :to => 'pages#disclaimer'
 
-  get "pages/privacy_policy"
-  match '/privacy_policy',   :to => 'pages#privacy_policy'
+  #get "pages/privacy_policy"
+  #match '/privacy_policy',   :to => 'pages#privacy_policy'
 
-  get "pages/investor_relations"
-  match '/investor_relations',   :to => 'pages#investor_relations'
+  #get "pages/investor_relations"
+  #match '/investor_relations',   :to => 'pages#investor_relations'
 
   devise_for :users,  :controllers => { :registrations => "users/registrations" }
 

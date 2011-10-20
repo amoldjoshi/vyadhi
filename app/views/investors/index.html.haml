@@ -1,0 +1,24 @@
+.span-24.last.box
+  %h1 Investor Relations
+
+.span-24.box
+  .column.span-5.append-1.box
+  - @investors.each do |investor|
+    %tr
+      %td= investor.id
+   
+  .column.span-18.last.box
+  - @investors.each do |investor|
+    %tr
+      %td= investor.heading
+      %td= investor.content
+      %td= investor.priority
+      %td= investor.type
+      %td= investor.typeid
+      %td= link_to 'Show', investor
+      %td= link_to 'Edit', edit_investor_path(investor)
+      %td= link_to 'Destroy', investor, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Investor', new_investor_path

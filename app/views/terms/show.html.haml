@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Heading:
+  = @term.heading
+%p
+  %b Content:
+  = @term.content
+%p
+  %b Priority:
+  = @term.priority
+%p
+  %b Type:
+  = @term.type
+%p
+  %b Typeid:
+  = @term.typeid
+
+= link_to 'Edit', edit_term_path(@term)
+\|
+= link_to 'Back', terms_path

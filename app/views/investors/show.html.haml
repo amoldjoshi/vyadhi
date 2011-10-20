@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Heading:
+  = @investor.heading
+%p
+  %b Content:
+  = @investor.content
+%p
+  %b Priority:
+  = @investor.priority
+%p
+  %b Type:
+  = @investor.type
+%p
+  %b Typeid:
+  = @investor.typeid
+
+= link_to 'Edit', edit_investor_path(@investor)
+\|
+= link_to 'Back', investors_path

@@ -1,0 +1,25 @@
+.span-24.last.box
+  %h1 FAQ
+
+.span-24.box
+  .column.span-5.append-1.box
+  - @faqs.each do |faq|
+    %tr
+      %td= faq.id
+   
+  .column.span-18.last.box
+  - @faqs.each do |faq|
+    %tr
+      %td= faq.heading
+      %td= faq.question
+      %td= faq.answer
+      %td= faq.priority
+      %td= faq.type
+      %td= faq.typeid
+      %td= link_to 'Show', faq
+      %td= link_to 'Edit', edit_faq_path(faq)
+      %td= link_to 'Destroy', faq, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New FAQ', new_faq_path

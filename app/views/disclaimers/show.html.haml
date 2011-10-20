@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Heading:
+  = @disclaimer.heading
+%p
+  %b Content:
+  = @disclaimer.content
+%p
+  %b Priority:
+  = @disclaimer.priority
+%p
+  %b Type:
+  = @disclaimer.type
+%p
+  %b Typeid:
+  = @disclaimer.typeid
+
+= link_to 'Edit', edit_disclaimer_path(@disclaimer)
+\|
+= link_to 'Back', disclaimers_path

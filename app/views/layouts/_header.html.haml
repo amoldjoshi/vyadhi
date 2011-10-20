@@ -8,9 +8,9 @@
         %ul
           = link_to_unless_current "Home",     root_path
           |
-          \#{link_to_unless_current "About",	   about_path} 
+          \#{link_to_unless_current "About",	{ :controller => "abouts", :action => "index" }} 
           |
-          \#{link_to_unless_current "Contact",  contact_path}
+          \#{link_to_unless_current "Contact",  { :controller => "contacts", :action => "index" }}
           %br/
           - if user_signed_in?
             Welcome: #{current_user.email}. Not you?

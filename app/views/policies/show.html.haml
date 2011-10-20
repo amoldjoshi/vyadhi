@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Heading:
+  = @policy.heading
+%p
+  %b Content:
+  = @policy.content
+%p
+  %b Priority:
+  = @policy.priority
+%p
+  %b Type:
+  = @policy.type
+%p
+  %b Typeid:
+  = @policy.typeid
+
+= link_to 'Edit', edit_policy_path(@policy)
+\|
+= link_to 'Back', policies_path

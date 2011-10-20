@@ -1,0 +1,24 @@
+.span-24.last.box
+  %h1 Disclaimers for this application.
+
+.span-24.box
+  .column.span-5.append-1.box
+  - @disclaimers.each do |disclaimer|
+    %tr
+      %td= disclaimer.id
+   
+  .column.span-18.last.box
+  - @disclaimers.each do |disclaimer|
+    %tr
+      %td= disclaimer.heading
+      %td= disclaimer.content
+      %td= disclaimer.priority
+      %td= disclaimer.type
+      %td= disclaimer.typeid
+      %td= link_to 'Show', disclaimer
+      %td= link_to 'Edit', edit_disclaimer_path(disclaimer)
+      %td= link_to 'Destroy', disclaimer, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Disclaimer', new_disclaimer_path

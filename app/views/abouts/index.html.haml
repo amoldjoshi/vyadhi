@@ -1,0 +1,24 @@
+.span-24.last.box
+  %h1 About us
+
+.span-24.box
+  .column.span-5.append-1.box
+  - @abouts.each do |about|
+    %tr
+      %td= about.id
+   
+  .column.span-18.last.box
+  - @abouts.each do |term|
+    %tr
+      %td= about.heading
+      %td= about.content
+      %td= about.priority
+      %td= about.type
+      %td= about.typeid
+      %td= link_to 'Show', about
+      %td= link_to 'Edit', edit_term_path(about)
+      %td= link_to 'Destroy', about, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New About', new_about_path
