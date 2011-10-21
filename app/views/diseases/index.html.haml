@@ -1,42 +1,18 @@
-%h1 Listing diseases
-
+.span-24.last
+  %h1 Home Page.
+.span-24.last
+.span-3
+  %h4 .
+.span-18
 %table
   %tr
+    %th image_url
     %th Name
-    %th Scientific name
-    %th Video
-    %th Introduction
-    %th Infection mechanism
-    %th Prevention
-    %th Screening test
-    %th Treatment
-    %th Severity_rating
-    %th Microbes
-    %th Severity
-    %th IsCurable
-    %th IsSymptoms
-    %th IsCondom
 
   - @diseases.each do |disease|
     %tr
+      %td= link_to image_tag(disease.image_url), disease 
       %td= disease.name
-      %td= disease.scientific_name
-      %td= disease.video
-      %td= disease.introduction
-      %td= disease.infection_mechanism
-      %td= disease.prevention
-      %td= disease.screening_test
-      %td= disease.treatment
-      %td= disease.severity_rating
-      %td= disease.microbes
-      %td= disease.severity
-      %td= disease.IsCurable
-      %td= disease.IsSymptoms
-      %td= disease.IsCondom
-      %td= link_to 'Show', disease
-      %td= link_to 'Edit', edit_disease_path(disease)
-      %td= link_to 'Destroy', disease, :confirm => 'Are you sure?', :method => :delete
-
 %br
 
 = link_to 'New Disease', new_disease_path

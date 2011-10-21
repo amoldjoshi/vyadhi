@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111019220753) do
+ActiveRecord::Schema.define(:version => 20111021061845) do
 
   create_table "abouts", :force => true do |t|
     t.string   "heading"
@@ -60,6 +60,7 @@ ActiveRecord::Schema.define(:version => 20111019220753) do
     t.boolean  "IsCurable"
     t.boolean  "IsSymptoms"
     t.boolean  "IsCondom"
+    t.string   "image_url"
   end
 
   create_table "districts", :force => true do |t|
