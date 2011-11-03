@@ -25,6 +25,7 @@ Vyadhi::Application.routes.draw do
   resources :districts
 
   resources :diseases
+  root :controller => 'diseases', :action => :index
 
   root :to => "pages#home"
 	
