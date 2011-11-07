@@ -78,7 +78,9 @@
         %td 
           %h4 Treatment Options
         %td Coming Soon.
-
+      %tr
+        %td= button_to "Take the test", test_path, :method=> :get, :id => @disease.id, :confirm => "Are you well prepared?"  
+        %td Coming Soon.
 %p
   %h4 Severity_rating:
   = @disease.severity_rating

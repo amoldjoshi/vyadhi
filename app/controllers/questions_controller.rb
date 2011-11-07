@@ -1,6 +1,7 @@
 class QuestionsController < ApplicationController
   # GET /questions
   # GET /questions.xml
+   
   def index
     @questions = Question.all
 

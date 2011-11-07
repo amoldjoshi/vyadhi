@@ -1,19 +1,27 @@
-%p#notice= notice
-
-%p
-  %b Disease:
-  = @test.disease_id
-%p
-  %b No of correct:
-  = @test.no_of_correct
-%p
-  %b No of wrong:
-  = @test.no_of_wrong
-%p
-  %b Pass or fail:
-  = @test.pass_or_fail
-
-= link_to 'Edit', edit_test_path(@test)
-\|
-= link_to 'Back', tests_path
-
+%h1
+.column.span-24
+  .span-24.last.box  
+    %table
+      %th
+        %h3 Good Luck with test.
+      %col{:style => "width:380px"}/
+      %col{:style => "width:5px"}/
+      %col{:style => "width:5px"}/
+      - Test.find(params[:id]).questions.each do |question|
+        = form_for question do |q|
+          %tr{:class => cycle("rowA", "rowB")}
+            %td= question.main_question
+            %tr
+              %td
+                %input{:name => "questions", :type => "radio", :value => question.choice_a}
+                  = h question.choice_a
+                %br
+                %input{:name => "questions", :type => "radio", :value => question.choice_b}
+                  = h question.choice_b
+                %br
+                %input{:name => "questions", :type => "radio", :value => question.choice_c}
+                  = h question.choice_c
+                %br
+                %input{:name => "questions", :type => "radio", :value => question.choice_d}
+                  = h question.choice_d
+                %br
