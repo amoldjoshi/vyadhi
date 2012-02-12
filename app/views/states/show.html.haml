@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b State id:
+  = @state.State_ID
+%p
+  %b State name:
+  = @state.State_Name
+
+= link_to 'Edit', edit_state_path(@state)
+\|
+= link_to 'Back', states_path

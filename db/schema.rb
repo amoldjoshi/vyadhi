@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111102184659) do
+ActiveRecord::Schema.define(:version => 20120211130817) do
 
   create_table "abouts", :force => true do |t|
     t.string   "heading"
@@ -29,6 +29,14 @@ ActiveRecord::Schema.define(:version => 20111102184659) do
     t.string   "url"
     t.string   "type"
     t.integer  "typeid"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "counties", :force => true do |t|
+    t.string   "County_ID"
+    t.string   "County_Name"
+    t.string   "State_ID"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -62,6 +70,18 @@ ActiveRecord::Schema.define(:version => 20111102184659) do
     t.boolean  "IsCondom"
     t.string   "image_url"
     t.string   "mouseover_url"
+    t.string   "diseaseinfo"
+    t.string   "acquire"
+    t.string   "complication"
+    t.string   "diagnose"
+    t.string   "symptom"
+    t.string   "treatment_option"
+    t.string   "diseaseinfo_url"
+    t.string   "acquire_url"
+    t.string   "complication_url"
+    t.string   "diagnose_url"
+    t.string   "symptom_url"
+    t.string   "treatment_option_url"
   end
 
   create_table "districts", :force => true do |t|
@@ -89,6 +109,9 @@ ActiveRecord::Schema.define(:version => 20111102184659) do
     t.integer  "enrollment"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "District_ID"
+    t.string   "District_Code"
+    t.string   "County_ID"
   end
 
   create_table "faqs", :force => true do |t|
@@ -167,6 +190,13 @@ ActiveRecord::Schema.define(:version => 20111102184659) do
     t.string   "grades"
     t.integer  "student_count"
     t.integer  "district_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "states", :force => true do |t|
+    t.string   "State_ID"
+    t.string   "State_Name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

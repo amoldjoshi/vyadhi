@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  State_ID: MyString
+  State_Name: MyString
+
+two:
+  State_ID: MyString
+  State_Name: MyString

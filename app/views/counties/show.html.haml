@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b County id:
+  = @county.County_ID
+%p
+  %b County name:
+  = @county.County_Name
+%p
+  %b State id:
+  = @county.State_ID
+
+= link_to 'Edit', edit_county_path(@county)
+\|
+= link_to 'Back', counties_path

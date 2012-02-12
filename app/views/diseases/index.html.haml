@@ -1,18 +1,36 @@
-.span-24.last
-  %h1 Home Page.
-.span-24.last
 .span-3
   %h4 .
 .span-18
-%table
-  %tr
-    %th image_url
-    %th Name
+  #navBox
+    #loginNavImg
+      %img{:src => "../images/logo.png"}/
+    .nav_page
+      - @diseases.each do |disease|
+        %a{:href => "/diseases/1"}
+          .button1
+        %a{:href => "/diseases/2"}
+          .button2
+        %a{:href => "/diseases/3"}
+          .button3
+        %a{:href => "/diseases/4"}
+          .button4
+        %a{:href => "/diseases/5"}
+          .button5
+        %a{:href => "/diseases/6"}
+          .button6
+        %a{:href => "/diseases/7"}
+          .button7
+        %a{:href => "/diseases/8"}
+          .button8
+        %a{:href => "/diseases/9"}
+          .button9
+        %a{:href => "/diseases/10"}
+          .button10
+        %a{:href => "/diseases/11"}
+          .button11
+        %a{:href => "/diseases/12"}
+          .button12
+        %a{:href => "/diseases/13"}
+          .button13
 
-  - @diseases.each do |disease|
-    %tr
-      %td= link_to image_tag(disease.image_url,:size=>"60x60", :alt => disease.name, :mouseover => disease.mouseover_url), disease 
-      %td= disease.name
-%br
-
-= link_to 'New Disease', new_disease_path
+        

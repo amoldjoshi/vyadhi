@@ -1,0 +1,199 @@
+#loginBox{
+	position:relative;
+	margin:auto;
+}
+
+#login-box {
+	width:333px;
+	height: 352px;
+	padding: 58px 76px 0 76px;
+	color: #ebebeb;
+	font: 12px Arial, Helvetica, sans-serif;
+	background: url(../images/images/login-box-backg.png) no-repeat;
+	margin:auto;
+}
+
+#loginBoxHack{
+	margin:auto;
+	width:100%;
+}
+
+#navBox{
+	padding-top:0px;
+}
+
+#loginBoxImg{
+	text-align:center;
+}
+
+#loginNavPage{
+	margin-right:30px;
+}
+
+#login-box img {
+	border:none;
+}
+
+#login-box h2 {
+	padding:0;
+	margin:0;
+	color: #ebebeb;
+	font: bold 44px "Calibri", Arial;
+}
+
+#login-box p {
+	color: #ebebeb;
+	font-size: 11px;
+	margin-left: 2px;
+}
+
+#login-box-name {
+	float: left;
+	display:inline;
+	width:80px;
+	text-align: right;
+	padding: 14px 10px 0 0;
+	margin:0 0 7px 0;
+}
+
+#login-box-field {
+	float: left;
+	display:inline;
+	width:230px;
+	margin:0;
+	margin:0 0 7px 0;
+}
+
+.form-login  {
+	width: 205px;
+	padding: 10px 4px 6px 3px;
+	border: 1px solid #112a13;
+	background-color:#1d4921;
+	font-size: 16px;
+	color: #ebebeb;
+}
+
+
+.login-box-options  {
+	clear:both;
+	padding-left:90px;
+	font-size: 11px;
+}
+
+.login-box-options a {
+	color: #ebebeb;
+	font-size: 11px;
+}
+
+div.nav_page{
+	background:url(../images/Nav_page.png) no-repeat;
+	width:780px;
+	height:650px;
+	margin:auto;
+	padding:0px;
+	position:relative;
+}
+
+div.button1{
+	position:absolute;
+	top:74px;
+	left:471px;
+	width:72px;
+	height:72px;
+}
+
+div.button2{
+	position:absolute;
+	top:161px;
+	left:554px;
+	width:72px;
+	height:72px;
+}
+
+div.button3{
+	position:absolute;
+	top:282px;
+	left:590px;
+	width:72px;
+	height:72px;
+}
+
+div.button4{
+	position:absolute;
+	top:403px;
+	left:554px;
+	width:72px;
+	height:72px;
+}
+
+div.button5{
+	position:absolute;
+	top:493px;
+	left:471px;
+	width:72px;
+	height:72px;
+}
+
+div.button6{
+	position:absolute;
+	top:529px;
+	left:345px;
+	width:72px;
+	height:72px;
+}
+
+div.button7{
+	position:absolute;
+	top:493px;
+	left:220px;
+	width:72px;
+	height:72px;
+}
+
+div.button8{
+	position:absolute;
+	top:403px;
+	left:136px;
+	width:72px;
+	height:72px;
+}
+
+div.button9{
+	position:absolute;
+	top:282px;
+	left:98px;
+	width:72px;
+	height:72px;
+}
+
+div.button10{
+	position:absolute;
+	top:161px;
+	left:136px;
+	width:72px;
+	height:72px;
+}
+
+div.button11{
+	position:absolute;
+	top:74px;
+	left:219px;
+	width:72px;
+	height:72px;
+}
+
+div.button12{
+	position:absolute;
+	top:38px;
+	left:345px;
+	width:72px;
+	height:72px;
+}
+
+div.button13{
+	position:absolute;
+	top:272px;
+	left:335px;
+	width:92px;
+	height:92px;
+}

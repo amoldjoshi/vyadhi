@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  County_ID: MyString
+  County_Name: MyString
+  State_ID: MyString
+
+two:
+  County_ID: MyString
+  County_Name: MyString
+  State_ID: MyString

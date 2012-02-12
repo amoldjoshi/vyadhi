@@ -3,6 +3,9 @@ class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
   protect_from_forgery
   layout 'standard' #added by Amol.
+  #layout 'layout' #added by Amol.
+  #layout 'login-box' #added by Amol.
+  #layout 'style' #added by Amol.
   
   	rescue_from CanCan::AccessDenied do |exception|
        flash[:error] = exception.message

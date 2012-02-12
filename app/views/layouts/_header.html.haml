@@ -5,12 +5,12 @@
         - logo = image_tag("logo.png", :alt => "health3d.com")
         = link_to logo, root_path
       .span-12.last
-        %ul
+        %ul  
           = link_to_unless_current "Home",     root_path
           |
-          \#{link_to_unless_current "About",	{ :controller => "abouts", :action => "index" }} 
+          \#{link_to_unless_current "About",	{ :controller => "/abouts", :action => "index" }} 
           |
-          \#{link_to_unless_current "Contact",  { :controller => "contacts", :action => "index" }}
+          \#{link_to_unless_current "Contact",  { :controller => "/contacts", :action => "index" }}
           %br/
           - if user_signed_in?
             Welcome: #{current_user.email}. Not you?

@@ -1,105 +1,79 @@
-%p#notice= notice
+%meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
+%script{:src => "maxheight.js", :type => "text/javascript"}
+%script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js", :type => "text/javascript"}
+%script{:src => "slimbox2.js", :type => "text/javascript"}
+%link{:href => "css/slimbox2.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
+%link{:href => "../style-projects-jquery.css", :rel => "stylesheet", :type => "text/css"}/
 
+%body#index{:onload => "new ElementMaxHeight();"}
 
-/ Added new code here.
-%h1
-.column.span-24
-
-  .column.span-11.append-1.box
-    %table
-      %col{:style => "width:380px"}/
-      %col{:style => "width:5px"}/
-      %col{:style => "width:5px"}/
-      %tr
-        %td 
-          %h4 Video Link Coming soon.
-      %tr
-        %td  
-          %h4 Infection mechanism:
-      %tr
-        %td= @disease.infection_mechanism
-      %tr
-        %td 
-          %h4 Prevention:
-      %tr
-        %td= @disease.prevention
-      %tr
-        %td
-          %iframe{:frameborder => "0", :height => "300", :marginheight => "0", :marginwidth => "0", :scrolling => "no", :src => "http://www.arcgis.com/home/webmap/embedViewer.html?webmap=d81d4b1292524fb8ba096664d842a7df&zoom=true&scale=true", :width => "420"}
+  #header_tall
+  #main
+    / header
+    #header
+      .h_logo1
+        .left
+          %img{:alt => "", :src => "../images/logoSmallWhite.png"}/
           %br/
-          %small
-            %a{:href => "http://www.arcgis.com/home/webmap/viewer.html?webmap=d81d4b1292524fb8ba096664d842a7df", :style => "color:#0000FF;text-align:left", :target => "_blank"} View Larger Map
-      %tr
-        %td 
-          %h4 Diagnosed
-      %tr
-        %td= @disease.screening_test
-      %tr
-        %h4 Service Provider in your area
+        .clear
+    #menu
+      =  render 'layouts/menu1'
 
-            
-  .column.span-11.last.box
-    %table
-      %col{:style => "width:380px"}/
-      %col{:style => "width:5px"}/
-      %col{:style => "width:5px"}/
-      %tr
-        %td
-          %h3= @disease.name
-      %tr    
-        %td 
-          %h4 Scientific name: 
-      %tr    
-        %td= @disease.scientific_name
-      %tr
-        %td 
-          %h4 
-            What is 
-            = @disease.name
-            ?
-      %tr
-        %td= @disease.introduction
-      %tr
-        %td 
-          %h4 
-            Symptoms for 
-            = @disease.name
-      %tr
-        %td= @disease.infection_mechanism
-      %tr
-        %td 
-          %h4 Leaving Space for Charts.
-      %tr
-        %td 
-          %h4 Treamtment Mechanism
-      %tr
-        %td= @disease.treatment
-      %tr
-        %td 
-          %h4 Treatment Options
-        %td Coming Soon.
-      %tr
-        %td= button_to "Take the test", test_path, :method=> :get, :id => @disease.id, :confirm => "Are you well prepared?"  
-        %td Coming Soon.
-%p
-  %h4 Severity_rating:
-  = @disease.severity_rating
-%p
-  %h4 Microbes:
-  = @disease.microbes
-%p
-  %h4 Severity:
-  = @disease.severity
-%p
-  %h4 Curable?:
-  = @disease.IsCurable
-%p
-  %h4 Symptoms?:
-  = @disease.IsSymptoms
-%p
-  %h4 Condom?:
-  = @disease.IsCondom
-  
-= link_to 'Edit', edit_disease_path(@disease)
-\|
-= link_to 'Back', diseases_path
+    #main
+      .content
+        %object{:classid => "clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B", :codebase => "http://www.apple.com/qtactivex/qtplugin.cab#version=7,3,0,0", :height => "496", :width => "720"}
+          %param{:name => "src", :value => @disease.image_url}
+            %param{:name => "showlogo", :value => "false"}
+              %param{:name => "scale", :value => "tofit"}
+                %param{:name => "saveembedtags", :value => "true"}
+                  %param{:name => "postdomevents", :value => "true"}
+                    %embed{:aggressivecleanup => "false", :airplay => "allow", :autostart => "false", :bgcolor => "white", :cache => "true", :controller => "true", :height => "496", :postdomevents => "true", :posterframe => "http://images.apple.com/global/elements/quicktime/qt_endstate848x480.jpg", :scale => "tofit", :showlogo => "false", :src => "video/disease2.m4v", :style => "width: 720px; height: 496px;", :type => "video/quicktime", :width => "720"}
+                      %param{:name => "posterframe", :value => "http://images.apple.com/global/elements/quicktime/qt_endstate848x480.jpg"}
+                        %param{:name => "showlogo", :value => "false"}
+                          %param{:name => "autostart", :value => "false"}
+                            %param{:name => "cache", :value => "true"}
+                              %param{:name => "bgcolor", :value => "white"}
+                                %param{:name => "aggressivecleanup", :value => "false"}
+                                  %param{:name => "controller", :value => "true"}/
+      .colLeft
+        .colDisease
+          .textDisease
+            %td= @disease.diseaseinfo
+          %a{:href => @disease.diseaseinfo_url, :rel => "lightbox"}
+            .buttonDisease
+        .colAcquire
+          .textAcquire
+            %td= @disease.acquire
+          %a{:href => @disease.acquire_url, :rel => "lightbox"}
+            .buttonAcquire
+        .colSymptom
+          .textSymptom
+            %td= @disease.symptom
+          %a{:href => @disease.symptom_url, :rel => "lightbox"}
+            .buttonSymptom
+        .colDiagnose
+          .textDiagnose
+            %td= @disease.diagnose
+          %a{:href => @disease.diagnose_url, :rel => "lightbox"}
+            .buttonDiagnose
+        .colTreatment
+          .textTreatment
+            %td= @disease.treatment_option
+          %a{:href => @disease.treatment_option_url, :rel => "lightbox"}
+            .buttonTreatment
+        .colComplication
+          .textComplication
+            %td= @disease.complication
+          %a{:href => @disease.complication_url, :rel => "lightbox"}
+            .buttonComplication
+      .colRight
+        .colGraph 
+        .colLocation
+          %td= button_to "Take the test", test_path, :method=> :get, :id => @disease.id, :confirm => "Are you well prepared?"
+      .colBottom
+        .colserviceProviders
+        .coltreatementOptions
+      %br
+      .clear/
+
+    =  render 'layouts/footer'

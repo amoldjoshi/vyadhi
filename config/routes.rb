@@ -1,5 +1,9 @@
 Vyadhi::Application.routes.draw do
  
+  resources :counties
+
+  resources :states
+
   resources :contacts
 
   resources :faqs
@@ -25,9 +29,9 @@ Vyadhi::Application.routes.draw do
   resources :districts
 
   resources :diseases
-  root :controller => 'diseases', :action => :index
+  #root :controller => 'diseases', :action => :index
 
-  root :to => "pages#home"
+  #root :to => "pages#home"
 	
   get "pages/home"
   match '/home',   :to => 'pages#home'
@@ -52,6 +56,7 @@ Vyadhi::Application.routes.draw do
   #match '/investor_relations',   :to => 'pages#investor_relations'
 
   devise_for :users,  :controllers => { :registrations => "users/registrations" }
+  root :to => redirect("/users/sign_in") 
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
